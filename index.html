@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tarazona</title>
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="relative">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-50 text-white">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <div class="text-2xl font-bold">zoomwithtara</div>
+     <ul class="flex space-x-6">
+  <li><a href="#inicio" class="hover:text-orange-500">Inicio</a></li>
+  <li><a href="#portafolio" class="hover:text-orange-500">Portafolio</a></li>
+  <li><a href="#tienda" class="hover:text-orange-500">Tienda</a></li>
+  <li><a href="#sobre-mi" class="hover:text-orange-500">Sobre mí</a></li>
+  <li><a href="#empresa" class="hover:text-orange-500">Empresa</a></li>
+  <li><a href="#contacto" class="hover:text-orange-500">Contacto</a></li>
+</ul>
+
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+<section id="inicio" class="relative h-screen w-full flex items-center justify-center text-center">
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+    <source src="./assets/videos/video_compatible.mp4" type="video/mp4">
+    Tu navegador no soporta videos.
+  </video>
+
+  <!-- Overlay oscuro -->
+  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+
+  <!-- Contenido sobre el video -->
+  <div class="relative z-10 text-white px-4">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4">Bienvenido a Mi Marca</h1>
+    <p class="text-xl md:text-2xl mb-6">Explora mis proyectos y conoce mi trabajo</p>
+    <a href="#portafolio" class="px-6 py-3 bg-blue-600 rounded hover:bg-blue-700 transition duration-300 ease-in-out">Ver Portafolio</a>
+  </div>
+
+</section>
+
+
+  <!-- Sección de Números sobre fondo negro -->
+<section id="numeros" class="py-20 bg-black text-center">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    <!-- Número 1 -->
+    <div>
+      <h2 class="text-6xl font-bold text-white hover:text-orange-500 transition duration-300" data-target="150">0</h2>
+      <p class="mt-2 text-lg text-white">Proyectos Realizados</p>
+    </div>
+
+    <!-- Número 2 -->
+    <div>
+      <h2 class="text-6xl font-bold text-white hover:text-orange-500 transition duration-300" data-target="25">0</h2>
+      <p class="mt-2 text-lg text-white">Marcas con las que he trabajado</p>
+    </div>
+
+    <!-- Número 3 -->
+    <div>
+      <h2 class="text-6xl font-bold text-white hover:text-orange-500 transition duration-300" data-target="10">0</h2>
+      <p class="mt-2 text-lg text-white">Premios obtenidos</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Script para animar números -->
+<script>
+  const counters = document.querySelectorAll('[data-target]');
+  const speed = 200; // Velocidad de animación
+
+  counters.forEach(counter => {
+    const animate = () => {
+      const value = +counter.getAttribute('data-target');
+      const data = +counter.innerText;
+      const increment = value / speed;
+
+      if (data < value) {
+        counter.innerText = Math.ceil(data + increment);
+        setTimeout(animate, 20);
+      } else {
+        counter.innerText = value;
+      }
+    };
+
+    // Activar animación cuando el elemento entre en pantalla
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          animate();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(counter);
+  });
+</script>
+
+
+
+</body>
+</html>
