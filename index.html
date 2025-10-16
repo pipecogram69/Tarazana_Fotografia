@@ -8,6 +8,8 @@
 </head>
 <body class="relative">
 
+  
+
   <!-- Navbar -->
   <nav class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-50 text-white">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
@@ -25,25 +27,32 @@
   </nav>
 
   <!-- Hero Section -->
-<section id="inicio" class="relative h-screen w-full flex items-center justify-center text-center">
+<section id="inicio" class="relative h-screen w-full overflow-hidden flex items-center justify-center text-center">
 
+
+  
   <!-- Video de fondo -->
-  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
-    <source src="./assets/videos/video_compatible.mp4" type="video/mp4">
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="./assets/videos/videofondo_web.mp4" type="video/mp4">
     Tu navegador no soporta videos.
   </video>
 
-  <!-- Overlay oscuro -->
-  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+  <!-- Capa semitransparente -->
+  <div class="absolute top-0 left-0 w-full h-full bg-black/30 z-10"></div>
 
-  <!-- Contenido sobre el video -->
-  <div class="relative z-10 text-white px-4">
-    <h1 class="text-5xl md:text-6xl font-bold mb-4">Bienvenido a Mi Marca</h1>
-    <p class="text-xl md:text-2xl mb-6">Explora mis proyectos y conoce mi trabajo</p>
-    <a href="#portafolio" class="px-6 py-3 bg-blue-600 rounded hover:bg-blue-700 transition duration-300 ease-in-out">Ver Portafolio</a>
+  <!-- Contenido encima del video -->
+  <div class="relative z-20 text-black px-4">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">Bienvenido a Mi Marca</h1>
+    <p class="text-xl md:text-2xl mb-6 drop-shadow">Explora mis proyectos y conoce mi trabajo</p>
+    <a href="#portafolio" class="px-6 py-3 bg-black-600 rounded hover:bg-blue-700 transition duration-300 ease-in-out">Ver Portafolio</a>
   </div>
 
 </section>
+
+
+
+
+
 
 
   <!-- Sección de Números sobre fondo negro -->
@@ -107,4 +116,7 @@
 
 
 </body>
+
+
+
 </html>
