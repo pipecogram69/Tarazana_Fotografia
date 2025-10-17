@@ -1,1 +1,109 @@
 @import "tailwindcss";
+
+
+
+/* Navbar Hero Styles */
+.navbar-hero {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  z-index: 30;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  color: white;
+}
+
+.navbar-logo img {
+  height: 90px;
+  width: auto;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #f97316;
+}
+
+/* Sección de Logos de Aliados */
+.logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(255, 255, 255);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.logo-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.logo-image {
+  width: 100%;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.logo-card:hover .logo-image {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo-card {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.logo-card:nth-child(1) { animation-delay: 0.1s; }
+.logo-card:nth-child(2) { animation-delay: 0.2s; }
+.logo-card:nth-child(3) { animation-delay: 0.3s; }
+.logo-card:nth-child(4) { animation-delay: 0.4s; }
+.logo-card:nth-child(5) { animation-delay: 0.5s; }
+.logo-card:nth-child(6) { animation-delay: 0.6s; }
+.logo-card:nth-child(7) { animation-delay: 0.7s; }
+.logo-card:nth-child(8) { animation-delay: 0.8s; }
+.logo-card:nth-child(9) { animation-delay: 0.9s; }
+.logo-card:nth-child(10) { animation-delay: 1s; }
+.logo-card:nth-child(11) { animation-delay: 1.1s; }
+.logo-card:nth-child(12) { animation-delay: 1.2s; }
