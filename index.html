@@ -13,15 +13,24 @@
   <nav class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-50 text-white">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
       <div class="text-2xl font-bold">zoomwithtara</div>
-     <ul class="flex space-x-6">
-  <li><a href="#inicio" class="hover:text-orange-500">Inicio</a></li>
-  <li><a href="#portafolio" class="hover:text-orange-500">Portafolio</a></li>
-  <li><a href="#tienda" class="hover:text-orange-500">Tienda</a></li>
-  <li><a href="#sobre-mi" class="hover:text-orange-500">Sobre mí</a></li>
-  <li><a href="#empresa" class="hover:text-orange-500">Empresa</a></li>
-  <li><a href="#contacto" class="hover:text-orange-500">Contacto</a></li>
-</ul>
-
+      
+      <div class="flex items-center space-x-6">
+        <ul class="flex space-x-6">
+          <li><a href="#inicio" class="hover:text-orange-500" data-es="Inicio" data-en="Home">Inicio</a></li>
+          <li><a href="#portafolio" class="hover:text-orange-500" data-es="Portafolio" data-en="Portfolio">Portafolio</a></li>
+          <li><a href="#tienda" class="hover:text-orange-500" data-es="Tienda" data-en="Store">Tienda</a></li>
+          <li><a href="#sobre-mi" class="hover:text-orange-500" data-es="Sobre mí" data-en="About">Sobre mí</a></li>
+          <li><a href="#empresa" class="hover:text-orange-500" data-es="Empresa" data-en="Company">Empresa</a></li>
+          <li><a href="#contacto" class="hover:text-orange-500" data-es="Contacto" data-en="Contact">Contacto</a></li>
+        </ul>
+        
+        <!-- Selector de idioma -->
+        <div class="language-selector">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <span class="text-gray-400">|</span>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -46,12 +55,12 @@
     </div>
     <!-- Botones con más espacio -->
     <ul class="navbar-menu">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#portafolio">Portafolio</a></li>
-      <li><a href="#tienda">Tienda</a></li>
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#empresa">Empresa</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+      <li><a href="#portafolio" data-es="Portafolio" data-en="Portfolio">Portafolio</a></li>
+      <li><a href="#tienda" data-es="Tienda" data-en="Store">Tienda</a></li>
+      <li><a href="#sobre-mi" data-es="Sobre mí" data-en="About">Sobre mí</a></li>
+      <li><a href="#empresa" data-es="Empresa" data-en="Company">Empresa</a></li>
+      <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
     </ul>
   </div>
 </div>
@@ -60,9 +69,9 @@
 
   <!-- Contenido principal del Hero -->
   <div class="relative z-20 text-white px-4 mt-16">
-    <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">Bienvenido a Mi Marca</h1>
-    <p class="text-xl md:text-2xl mb-6 drop-shadow">Explora mis proyectos y conoce mi trabajo</p>
-    <a href="#portafolio" class="px-6 py-3 bg-blue-600 rounded hover:bg-blue-700 transition duration-300 ease-in-out">Ver Portafolio</a>
+    <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg" data-es="Bienvenido a Mi Marca" data-en="Welcome to My Brand">Bienvenido a Mi Marca</h1>
+    <p class="text-xl md:text-2xl mb-6 drop-shadow" data-es="Explora mis proyectos y conoce mi trabajo" data-en="Explore my projects and get to know my work">Explora mis proyectos y conoce mi trabajo</p>
+    <a href="#portafolio" class="px-6 py-3 bg-blue-600 rounded hover:bg-blue-700 transition duration-300 ease-in-out" data-es="Ver Portafolio" data-en="View Portfolio">Ver Portafolio</a>
   </div>
 
 </section>
@@ -76,19 +85,19 @@
     <!-- Número 1 -->
     <div>
       <h2 class="text-6xl font-bold text-white hover:text-orange-500 transition duration-300" data-target="150">0</h2>
-      <p class="mt-2 text-lg text-white">Proyectos Realizados</p>
+      <p class="mt-2 text-lg text-white" data-es="Proyectos Realizados" data-en="Completed Projects">Proyectos Realizados</p>
     </div>
 
     <!-- Número 2 -->
     <div>
       <h2 class="text-6xl font-bold text-white hover:text-orange-500 transition duration-300" data-target="25">0</h2>
-      <p class="mt-2 text-lg text-white">Marcas con las que he trabajado</p>
+      <p class="mt-2 text-lg text-white" data-es="Marcas con las que he trabajado" data-en="Brands I've Worked With">Marcas con las que he trabajado</p>
     </div>
 
     <!-- Número 3 -->
     <div>
       <h2 class="text-6xl font-bold text-white hover:text-orange-500 transition duration-300" data-target="10">0</h2>
-      <p class="mt-2 text-lg text-white">Premios obtenidos</p>
+      <p class="mt-2 text-lg text-white" data-es="Premios obtenidos" data-en="Awards Won">Premios obtenidos</p>
     </div>
 
   </div>
@@ -100,8 +109,8 @@
     
     <!-- Título -->
 <div class="text-center mb-16">
-  <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Nuestros Aliados</h2>
-  <p class="text-xl text-gray-300">Empresas que confían en nosotros</p>
+  <h2 class="text-4xl md:text-5xl font-bold text-white mb-4" data-es="Nuestros Aliados" data-en="Our Partners">Nuestros Aliados</h2>
+  <p class="text-xl text-gray-300" data-es="Empresas que confían en nosotros" data-en="Companies that trust us">Empresas que confían en nosotros</p>
 </div>
 
     <!-- Grid de logos -->
@@ -171,6 +180,60 @@
   </div>
 </section>
 
+<!-- Sección de Tienda -->
+<section id="tienda" class="py-20 bg-black">
+  <div class="max-w-7xl mx-auto px-4">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Galería de imágenes (lado izquierdo) -->
+      <div class="gallery-container">
+        <div class="gallery-wrapper">
+          <img src="./assets/Producto1.jpeg" alt="Producto 1" class="gallery-image active">
+          <img src="./assets/Producto2.jpeg" alt="Producto 2" class="gallery-image">
+          <img src="./assets/Producto3.jpeg" alt="Producto 3" class="gallery-image">
+          <img src="./assets/Producto4.jpeg" alt="Producto 4" class="gallery-image">
+          <img src="./assets/Producto5.jpeg" alt="Producto 5" class="gallery-image">
+        </div>
+        
+        <!-- Indicadores -->
+        <div class="gallery-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <span class="dot" data-index="3"></span>
+          <span class="dot" data-index="4"></span>
+        </div>
+      </div>
+
+      <!-- Contenido de texto (lado derecho) -->
+<div class="store-content">
+  <h2 class="text-4xl md:text-5xl font-bold text-white mb-6" data-es="Nuestra Tienda" data-en="Our Store">Nuestra Tienda</h2>
+  <p class="text-xl text-gray-300 mb-8 leading-relaxed" data-es="Descubre productos exclusivos de alta calidad. Cada pieza cuenta una historia única capturada a través de mi lente." data-en="Discover exclusive high-quality products. Each piece tells a unique story captured through my lens.">
+    Descubre productos exclusivos de alta calidad. 
+    Cada pieza cuenta una historia única capturada a través de mi lente.
+  </p>
+  
+  <!-- Frase destacada -->
+  <div class="quote-box">
+    <p class="text-2xl font-light italic text-white mb-6" data-es='"La fotografía es el arte de capturar momentos que cuentan historias eternas"' data-en='"Photography is the art of capturing moments that tell eternal stories"'>
+      "La fotografía es el arte de capturar momentos que cuentan historias eternas"
+    </p>
+  </div>
+
+  <!-- Botón -->
+  <a href="#" class="store-button">
+    <span data-es="Ir a la Tienda" data-en="Go to Store">Ir a la Tienda</span>
+    <svg class="button-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+    </svg>
+  </a>
+</div>
+
+    </div>
+  </div>
+</section>
+
 <!-- Script para animar números -->
 <script>
   const counters = document.querySelectorAll('[data-target]');
@@ -204,10 +267,80 @@
   });
 </script>
 
+<!-- Script para la galería de la tienda -->
+<script>
+  // Galería automática
+  const images = document.querySelectorAll('.gallery-image');
+  const dots = document.querySelectorAll('.dot');
+  let currentIndex = 0;
 
+  function showImage(index) {
+    // Remover active de todos
+    images.forEach(img => img.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Agregar active al actual
+    images[index].classList.add('active');
+    dots[index].classList.add('active');
+    currentIndex = index;
+  }
+
+  // Cambio automático cada 4 segundos
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }, 4000);
+
+  // Click en los dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showImage(index);
+    });
+  });
+</script>
+
+<!-- Script para cambio de idioma -->
+<script>
+  let currentLang = 'es';
+  
+  const langButtons = document.querySelectorAll('.lang-btn');
+  const translatableElements = document.querySelectorAll('[data-es][data-en]');
+  
+  function changeLanguage(lang) {
+    currentLang = lang;
+    
+    // Actualizar botones activos
+    langButtons.forEach(btn => {
+      if (btn.dataset.lang === lang) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+    
+    // Traducir todos los elementos
+    translatableElements.forEach(element => {
+      const translation = element.dataset[lang];
+      element.textContent = translation;
+    });
+    
+    // Guardar preferencia
+    localStorage.setItem('preferredLanguage', lang);
+  }
+  
+  // Event listeners para los botones
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      changeLanguage(btn.dataset.lang);
+    });
+  });
+  
+  // Cargar idioma guardado al iniciar
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferredLanguage') || 'es';
+    changeLanguage(savedLang);
+  });
+</script>
 
 </body>
-
-
-
 </html>
